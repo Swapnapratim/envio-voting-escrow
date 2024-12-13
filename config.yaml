@@ -11,21 +11,6 @@ networks:
     - 0xC594261C88E548b00BB9eBd27529C14D4Dd5aA0e
     handler: ./src/EventHandlers.js
     events:
-    - event: AcceptEarlyUnlockOwnership(address admin)
-    - event: AcceptOwnership(address admin)
-    - event: AcceptUnlockAllOwnership(address admin)
-    - event: ApplySmartWalletChecker(address admin)
-    - event: BeaconUpgraded(address indexed beacon)
-    - event: CommitEarlyUnlockOwnership(address admin)
-    - event: CommitOwnership(address admin)
-    - event: CommitSmartWalletChecker(address admin)
-    - event: CommitUnlockAllOwnership(address admin)
-    - event: DeployerControllerNew(address deployer_controller_new)
-    - event: EarlyUnlock(bool status)
-    - event: PenaltySpeed(uint256 penalty_k)
-    - event: PenaltyTreasury(address penalty_treasury)
-    - event: RewardReceiver(address newReceiver)
-    - event: TotalUnlock(bool status)
     - event: Deposit(address,uint256,uint256,int128,uint256)
     - event: Withdraw(address,uint256,uint256)
     - event: WithdrawEarly(address,uint256,uint256)
