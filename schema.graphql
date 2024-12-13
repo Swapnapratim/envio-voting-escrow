@@ -1,6 +1,6 @@
 type BeaconProxy_Deposit {
   id: ID!
-  provider: String!         
+  provider: String! @index        
   value: BigInt!            
   locktime: BigInt! @index       
   depositType: Int!                
@@ -9,14 +9,14 @@ type BeaconProxy_Deposit {
 
 type BeaconProxy_Withdraw {
   id: ID!
-  provider: String!         
+  provider: String! @index         
   value: BigInt!            
   timestamp: BigInt!       
 }
 
 type BeaconProxy_WithdrawEarly {
   id: ID!
-  provider: String!         
+  provider: String! @index         
   penalty: BigInt!          
   timeLeft: BigInt!        
 }

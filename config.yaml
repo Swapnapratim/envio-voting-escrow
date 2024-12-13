@@ -4,15 +4,15 @@
 name: envio-voting-escrow
 networks:
 - id: 11155111
-  start_block: 6769003
+  start_block: 6760000
   contracts:
   - name: BeaconProxy
     address:
     - 0xC594261C88E548b00BB9eBd27529C14D4Dd5aA0e
     handler: ./src/EventHandlers.js
     events:
-    - event: Deposit(address,uint256,uint256,int128,uint256)
-    - event: Withdraw(address,uint256,uint256)
-    - event: WithdrawEarly(address,uint256,uint256)
+    - event: Deposit(address indexed provider,uint256,uint256 indexed locktime,int128,uint256)
+    - event: Withdraw(address indexed provider,uint256,uint256)
+    - event: WithdrawEarly(address indexed provider,uint256,uint256)
     - event: Supply(uint256,uint256)
 rollback_on_reorg: false
