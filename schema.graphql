@@ -1,0 +1,30 @@
+type BeaconProxy_Deposit {
+  id: ID!
+  provider: String!         
+  value: BigInt!            
+  locktime: BigInt! @index       
+  depositType: Int!                
+  timestamp: BigInt!        
+}
+
+type BeaconProxy_Withdraw {
+  id: ID!
+  provider: String!         
+  value: BigInt!            
+  timestamp: BigInt!       
+}
+
+type BeaconProxy_WithdrawEarly {
+  id: ID!
+  provider: String!         
+  penalty: BigInt!          
+  timeLeft: BigInt!        
+}
+
+type BeaconProxy_Supply {
+  id: ID!
+  previousSupply: BigInt!   
+  currentSupply: BigInt!    
+}
+
+
